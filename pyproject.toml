@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "session-exporter"
+version = "0.1.0"
+description = "Export Codex and Claude Code session histories for one repository into a redacted ZIP"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+windows = ["tzdata"]
+
+[project.scripts]
+session-exporter = "session_exporter.cli:main"
+
+[tool.setuptools]
+packages = ["session_exporter"]
